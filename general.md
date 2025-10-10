@@ -1,0 +1,8 @@
+- never use dynamic imports (unless asked to) like `await import(..)
+- never cast to any
+- do not add extra defensive checks or try/catch blocks
+- do not redeclare types, create a single source of truth and import it
+- do not use optional types, use explicit nullables instead (e.g., `string | null`)
+- use zod to validate deserialized data
+- trust typescript types, find missing types instead of guessing
+- recheck files before consecutive edits, assume user changes are correct
