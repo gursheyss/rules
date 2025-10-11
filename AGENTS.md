@@ -7,3 +7,4 @@
 - trust typescript types, find missing types instead of guessing
 - recheck files before consecutive edits, assume user changes are correct
 - stop returning everything `as const` unless specified
+- assume i have all relevant packages installed already unless specified
