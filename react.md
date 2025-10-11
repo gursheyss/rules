@@ -1,0 +1,3 @@
+- use kebab-case for component filenames
+- only use useMemo() useCallback() etc when it makes sense, dont unnecessarily add it to every function
+- extract all reusable utility functions to a /utils file/folder
