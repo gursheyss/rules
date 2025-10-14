@@ -3,3 +3,5 @@
 - extract all reusable utility functions to a /utils file/folder
 - use useContext() for feature-scoped config or state that stays within a single provider boundary
 - use zustand for shared state or coordinated updates across multiple components/features
+- prefer deriving render data directly from props/state; avoid redundant state and Effects
+- handle user-driven logic in event handlers; use Effects only to sync with external systems
