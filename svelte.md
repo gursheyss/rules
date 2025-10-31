@@ -1,0 +1,12 @@
+- use $derived.by() for function-based computations, not $derived(() => {})
+- extend ComponentProps<typeof BaseComponent> instead of manually redefining inherited props
+- use Component type from svelte for component/icon props, never use any when building out components
+- use on() from svelte/events instead of manual addEventListener/removeEventListener
+- remove browser, typeof window, typeof document checks in $effect() - effects are client-side only
+- initialize $state() with computed values directly instead of using separate $effect() for initial values
+- access derived values directly in templates ({value}), not as functions ({value()})
+- access derived values directly in effects (const x = derivedValue), not as functions
+- always add keys to #each blocks for reactivity and performance when needed, usually we can use the value directly if we know it's unique
+- batch event listener cleanup: const listeners = [on(...), on(...)]; return () => listeners.forEach(l => l())
+- handle user-driven logic in event handlers; use $effect() only to sync with external systems
+- prefer deriving data from props/state; avoid redundant state and unnecessary effects
